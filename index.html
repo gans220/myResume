@@ -25,213 +25,73 @@
 	<link rel="stylesheet" type="text/css" href="css/tabstyle.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/mobilestyle.css" media="all" />
 	
+	<!-- Angular -->
+	<script type="text/javascript" src="js/angular.min.js"></script>
 	
+	<!-- Custom Angular JS -->
+	<script type="text/javascript" src="js/app.js"></script>
 	
 </head>
-<body>
-	<div class="container-fluid">
-		<div class="coverImage"></div>
-		<div class="coverContent container">
-			<div class="row">
-				<div class="col-sm-3 col-md-3 text-center">
-					<img src="images/dp.jpg" alt="my Photo" class="displayPic floatLeft"/>
+<body ng-app="resume">
+	<div class="container-fluid" ng-controller="resumeController as resumeCtrl">
+		<header>
+			<div class="coverImage"></div>
+			<div class="coverContent container">
+				<div class="row">
+					<div class="col-sm-3 col-md-3 text-center">
+						<img src="images/dp.jpg" alt="my Photo" class="displayPic floatLeft"/>
+					</div>
+					<div class="col-sm-9 col-md-9">
+						<h1 id="nameHeader">{{resumeCtrl.headerDetails.name}}</h1>
+						<p id="degreeHeader"> {{resumeCtrl.headerDetails.education}}</p>
+						<p id="locationHeader"> {{resumeCtrl.headerDetails.location}}</p>								
+					</div>			
 				</div>
-				<div class="col-sm-9 col-md-9">
-					<h1 id="nameHeader"> Ganesh Kumar Subramanian</h1>
-					<p id="degreeHeader"> Mechatronics graduate passionate about HCI</p>
-					<p id="locationHeader"> Lives in Hyderabad</p>								
+				<div class="row">
+					<div class="col-sm-3 col-md-3 text-center">
+						<div class="socialLinks floatLeft">
+							<a href="#"><i class="fa fa-facebook" href="#"></i></a>
+							<a href="#"><i class="fa fa-twitter" href="#"></i></a>
+							<a href="#"><i class="fa fa-linkedin" href="#"></i></a>
+						</div>	
+					</div>			
 				</div>			
 			</div>
-			<div class="row">
-				<div class="col-sm-3 col-md-3 text-center">
-					<div class="socialLinks floatLeft">
-						<a href="#"><i class="fa fa-facebook" href="#"></i></a>
-						<a href="#"><i class="fa fa-twitter" href="#"></i></a>
-						<a href="#"><i class="fa fa-linkedin" href="#"></i></a>
-					</div>	
-				</div>			
-			</div>			
-		</div>
+		</header>
+		
 		<div class="container timeline">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="timelineRow">
-				<div class="timelineIcon greenBgIcon">
-					<i class="fa fa-briefcase faa-pulse animated "></i>
-				</div>
+					<div class="timelineRow" ng-repeat="experience in resumeCtrl.experiences" ng-class="experience.bigRow">
+						
+						<div class="timelineIcon" ng-class="experience.iconColorClass">
+							<i class="animated" ng-class="experience.icon" ng-show="experience.icon"></i>
+							<strong class="timkenFont" ng-show="experience.timken">T</strong>
+							<strong class="fordFont" ng-show="experience.ford">F</strong>
+						</div>
 				
-				<div class="timelineDate">
-					<p>January 2014</p>
-				</div>
+						<div class="timelineDate">
+							<p>{{experience.period}}</p>
+						</div>
 				
-				<div class="timelineContent">
-					<h1> Wipro Technologies</h1>
-					<h3> Project Engineer </h3>
-					<ul>
-						<li>Trained in Unix Server Administration</li>
-						<li>Was deployed in the Service Desk of a UK based construction company Carillion PLC</li>
-					</ul>
-				</div>
+						<div class="timelineContent" ng-class="experience.bigContent">
+							<h1> {{experience.institute}}</h1>
+							<h3> {{experience.position}} </h3>
+							<ul ng-show="experience.desc1">
+								<li ng-show="experience.desc1">{{experience.desc1}}</li>
+								<li ng-show="experience.desc1">{{experience.desc2}}</li>
+							</ul>
+							<p ng-show="experience.paragh">{{experience.paragh}}</p>
+							<iframe ng-show="experience.video" width="100%" height="72%" src="https://www.youtube.com/embed/MPawBcpggbM" frameborder="0" allowfullscreen></iframe>
+						</div>
 				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon">
-					<i class="fa fa-briefcase"></i>
-				</div>
-				
-				<div class="timelineDate">
-					<p>June 2013 - December 2013 </p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1> BlackChalk India</h1>
-					<h3> Android Developer </h3>
-					<ul>
-						<li>Worked as the part of team that was developing an android application based on a school management web application called Prezons.</li>
-						<li>Designed activity layouts and UI elements</li>
-					</ul>
-				</div>
-				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon gradIconBg">
-					<i class="fa fa-graduation-cap faa-tada animated "></i>
-				</div>
-				
-				<div class="timelineDate">
-					<p>May 2013 </p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1>SRM University</h1>
-					<h3>B Tech, Mechatronics </h3>
-					<ul>
-						<li>Graduated with a Cumulative Grade Point Average of 7.98</li>
-						<li>Campus placed in Wipro Technologies</li>
-					</ul>
-				</div>
-				
-			</div>
-			
-			<div class="timelineRow bigRow">
-				<div class="timelineIcon gradIconBg">
-					<i class="fa fa-spin fa-gear"></i>
-				</div>
-				
-				<div class="timelineDate">
-					<p>April 2013 </p>
-				</div>
-				
-				<div class="timelineContent bigContent">
-					<h1>Final Year Thesis</h1>
-					<h3>Kinect Controlled Robotic Arm</h3>
-					<p>Designed and built a robotic arm that could replicate the movement of the real arm, which is captured by using a stereographic camera present in Xbox Kinect</p>
-					<iframe width="100%" height="72%" src="https://www.youtube.com/embed/MPawBcpggbM" frameborder="0" allowfullscreen></iframe>
-				</div>
-				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon timkenBgIcon">
-					<strong class="timkenFont">T</strong>
-				</div>
-				
-				<div class="timelineDate">
-					<p>December 2011 </p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1>Timken Company</h1>
-					<h3>Intern</h3>
-					<ul>
-						<li>Was deployed in the engine plant of the company, where we were allowed to observe the functioning of manufacturing line</li>
-						<li>Obtained company data and used it to perform a capacity analysis and work-flow analysis</li>
-					</ul>
-				</div>
-				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon fordBgIcon">
-					<strong class="fordFont">F</strong>
-				</div>
-				
-				<div class="timelineDate">
-					<p>December 2010 </p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1>Ford Motor Company</h1>
-					<h3>Intern</h3>
-					<ul>
-						<li>Was deployed in the engine plant of the company, where we were allowed to observe the functioning of manufacturing line</li>
-						<li>Obtained company data and used it to perform a capacity analysis and a work-flow analysis</li>
-					</ul>
-				</div>
-				
-				
-				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon schoolBgIcon">
-					<strong class="fa fa-university"></strong>
-				</div>
-				
-				<div class="timelineDate">
-					<p>May 2009</p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1>Amrita Vidyalayam</h1>
-					<h3>Highschool (9th to 12th)</h3>
-					<ul>
-						<li>Completed 10th and 12th Board exams with a score of 73% and 79% respectively</li>
-						<li>Elected as the School Pupil Leader during my 12th</li>
-					</ul>
-				</div>				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon primaryBgIcon">
-					<strong class="fa fa-pencil-square-o"></strong>
-				</div>
-				
-				<div class="timelineDate">
-					<p>1997 to 2004</p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1>Primary and Secondary Schooling</h1>
-					<h3>Schools Attended: SEV, Madurai; CEOA, Madurai; International Indian School, Riyadh </h3>
-					<ul>
-						<li>Did my primary schooling at my Hometown - Madurai</li>
-						<li>Moved to Saudi Arabia during 1998 and did my secondary schooling there till 2004</li>
-					</ul>
-				</div>				
-			</div>
-			
-			<div class="timelineRow">
-				<div class="timelineIcon heartBgIcon">
-					<strong class="fa fa-heart faa-pulse animated"></strong>
-				</div>
-				
-				<div class="timelineDate">
-					<p>28 June 1991</p>
-				</div>
-				
-				<div class="timelineContent">
-					<h1>Born</h1>
-					<h3>Madurai</h3>
-					<br/>
-					<p>Born as the first kid of Subramanian and Valli</p>
-				</div>				
-			</div>
+					</div>			
 				</div>
 			</div>
 		</div>
+		
+		<footer></footer>
+		
 	</div>
 	
 </body>
