@@ -1,0 +1,266 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body,html{
+	width: 100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+}
+
+.container-fluid{
+	padding: 0;
+	
+}
+
+/*.col-md-12, .col-lg-12, .col-sm-12{
+	padding: 0;
+	margin:0 1em 0 0;
+}*/
+
+
+.coverImage{
+	object-fit: cover;
+	height: 20em;
+	width: 100%;
+	position:absolute;
+	z-index: -1;
+	background-image: url("../images/cover.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.coverContent{
+	position: relative;
+	width: 100%;
+	height: 20em;
+	background-color: rgba(255,255,255,0.5);
+	z-index: 2;
+}
+
+.displayPic{
+	height: 12em;
+	width: 12em;
+	border-radius: 6em;
+	border: 1px solid black;
+	overflow: hidden;
+	margin: 2em 1em 1em 1em;
+}
+
+#nameHeader{
+	padding-top: 2em;
+	font-family: 'Bad Script', cursive;
+	font-size: 2.5em;
+	margin-left: 0.9em;
+}
+
+#degreeHeader{
+	font-family: 'Bad Script', cursive;
+	font-size: 1.3em;
+	padding-top: 0.5em;
+	margin-bottom: 0;
+	padding-bottom: 0.1em;
+	margin-left: 1.7em;
+}
+
+#locationHeader{
+	font-family: 'Abel', sans-serif;
+	font-size: 1.3em;
+	padding-top: 0.5em;
+	margin-bottom: 0;
+	font-family: 'Bad Script', cursive;
+	margin-left: 1.7em;
+}
+
+.socialLinks{
+	position: relative;
+	padding-top: 0.5em;
+	margin-left: 1em;
+	clear:both;
+}
+
+.socialLinks a{
+	color: black;
+	font-size: 1.2em;
+	height: 2em;
+	width: 2em;
+	border: 1px solid black;
+	border-radius: 50%;
+	margin-left: 0.25em;
+	padding-top: 0.25em;
+	display: inline-block;
+	text-align: center;
+	margin-top: 0.2em;
+	
+}
+
+
+.timeline{
+	
+	width:100%;
+	height: 100%;
+	padding-top: 40px;
+	background-color: #F0E4D3;
+}
+
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 115px;
+    margin-left: -2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 4px;
+    border-radius: 2px;
+    display: block; 
+	margin-top: 2em;
+	
+}
+
+.timelineRow{
+	position: relative;
+	z-index:10;
+	height: 275px;
+	
+}
+
+
+
+
+.timeline .timelineRow .timelineIcon{
+	display: inline-block;
+	position: absolute;
+	left: 70px;
+	top: 95px;
+	width: 60px;
+	height:60px;
+	border: 3px solid white;
+	z-index:1;
+	border-radius: 50%;
+	background-color: #3974D8;
+	color: white;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.timelineIcon:after{
+	content:"";
+	display: inline-block;
+	position: relative;
+	width:80px;
+	height: 3px;
+	background-color: rgba(0, 0, 0, 0.2);
+	left: 47px;
+	top:-46px;
+	
+}
+
+
+.timeline .timelineRow .timelineDate{
+
+	position: absolute;
+	left:210px;
+	top: 0px;
+    text-align: left;
+	font-family: 'Lobster', sans-serif;
+	font-size:1.2em;
+	
+}
+
+.timeline .timelineRow .timelineContent{
+	position: absolute;
+	left: 210px;
+	top: 30px;
+	height: 210px;
+	padding: 1em;
+	height: 225px;
+	background-color: white;
+	width: 70%;
+	border-radius: 5px;
+	
+}
+
+.bigContent{
+	height: 600px !important;
+}
+
+.bigRow{
+	height: 650px !important;
+}
+
+.timelineContent > h1{
+	font-family: 'Bad Script', sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.timelineContent > h3{
+	font-family: 'Bad Script', sans-serif;
+	font-size: 1.2em;
+}
+
+.timelineContent > ul{
+	padding-left: 3em;
+	margin-top: 1.5em;
+	font-family: 'Abel';
+}
+
+.timelineContent > ul > li{
+	margin: 0.5em 1em;
+	font-size: 1.2em;
+}
+
+.timelineContent > p{
+	font-family: 'Abel';
+	font-size: 1.2em;
+}
+
+
+.floatLeft{
+	float: left;
+}
+
+.floatRight{
+	float: right;
+}
+
+.gradIconBg{
+	background-color: #D44132 !important;
+}
+
+.greenBgIcon{
+	background-color: #1EA176 !important;
+}
+
+.fordBgIcon{
+	background-color: #02599C !important;
+}
+
+.fordFont{
+	font-family:'Pinyon Script', cursive;
+}
+
+.timkenFont{
+	font-family:serif;
+}
+
+.timkenBgIcon{
+	background-color: #FF7300 !important;
+}
+
+.heartBgIcon{
+	background-color: #D22076 !important;
+}
+
+.primaryBgIcon{
+	background-color: #73CDD5 !important;
+}
+
+.schoolBgIcon{
+	background-color: #95BB0E !important;
+}
+

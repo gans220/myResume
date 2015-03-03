@@ -1,0 +1,104 @@
+@media screen and (max-width:545px){
+	#nameHeader{
+		
+		font-size: 1.6em;
+		text-align: center;
+	}
+
+	#degreeHeader{
+	
+		font-size: 1em;
+		text-align: center;
+	}
+
+	#locationHeader{
+		font-size: 1em;
+		text-align: center;
+	}
+	.timeline:after {
+    
+		top: 0;
+		left: 30px;
+		margin-left: -2px;
+		background-color: rgba(0, 0, 0, 0.2);
+		height: 100%;
+		width: 4px;
+		border-radius: 2px;
+		display: block; 
+		margin-top: 2em;
+		z-index: -1;
+	
+	}
+	
+	.timelineRow{
+		height: 355px;
+	
+	}
+	
+	.timeline .timelineRow .timelineIcon{
+		left: -5px;
+		top: 95px;
+		width: 40px;
+		height:40px;
+		border: 3px solid white;
+		z-index:1;
+		border-radius: 50%;
+		background-color: #3974D8;
+		color: white;
+		padding: 5px 8px;
+		text-align: center;
+		font-size: 1.2em;
+	}
+	.timelineIcon:after{
+	
+		width:38px;
+		left: 26px;
+		top:-28px;
+	
+	}
+	
+	.timelineContent iframe{
+		height: 40%;
+	}
+	
+	.timeline .timelineRow .timelineDate{
+
+		position: absolute;
+		left:70px;
+		top: 0px;
+		text-align: left;
+		font-family: 'Lobster', sans-serif;
+		font-size:1em;
+	
+	}
+
+	.timeline .timelineRow .timelineContent{
+		position: absolute;
+		left: 70px;
+		top: 30px;
+		padding: 1em;
+		height: 280px;
+		background-color: white;
+		width: 80%;
+		border-radius: 5px;
+	
+	}
+	
+	.timelineContent > ul{
+		padding-left: 0.2em;
+		margin-top: 1em;
+		font-family: 'Abel';
+	}
+	
+	.bigContent{
+		height: 400px !important;
+	}
+
+	.bigRow{
+		height: 450px !important;
+	}
+
+
+
+
+}

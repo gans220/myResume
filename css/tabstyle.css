@@ -1,0 +1,94 @@
+@media screen and (max-width:768px){
+
+	.coverImage{
+		height: 35em;
+	}
+	
+	#nameHeader{
+		
+		text-align: center;
+		padding-top: 1em;
+	}
+
+	#degreeHeader{
+	
+		text-align: center;
+	}
+
+	#locationHeader{
+	
+		text-align: center;
+	}
+	
+
+	.timelineContent > h1{
+		font-family: 'Bad Script', sans-serif;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	.timelineContent > h3{
+		font-family: 'Bad Script', sans-serif;
+		font-size: 1em;
+	}
+
+	.timelineContent > ul{
+		padding-left: 3em;
+		margin-top: 1.3em;
+		font-family: 'Abel';
+	}	
+
+	.timelineContent > ul > li{
+		margin: 0.5em 1em;
+		font-size: 1em;
+	}
+	
+	.timelineContent > p {
+		font-size: 1em;
+	}
+	
+	.timelineIcon:after{
+		width:60px;	
+	}
+	
+	.timeline .timelineRow .timelineContent{
+		left: 135px;
+		width: 75%;
+	}
+	
+	.timeline:after {
+    
+		top: 0;
+		left: 60px;
+		margin-left: -2px;
+		background-color: rgba(0, 0, 0, 0.2);
+		height: 100%;
+		width: 4px;
+		border-radius: 2px;
+		display: block; 
+		margin-top: 2em;
+		z-index: -1;
+	
+	}
+	
+	.timeline .timelineRow .timelineIcon{
+		left: 15px;
+		border: 3px solid white;
+		z-index:1;
+		border-radius: 50%;
+		background-color: #3974D8;
+		color: white;
+		padding: 5px 8px;
+		text-align: center;
+		font-size: 2em;
+	}
+	
+	.timeline .timelineRow .timelineDate{
+
+		left:135px;
+		font-size: 1em;
+	
+	}
+	
+
+}
